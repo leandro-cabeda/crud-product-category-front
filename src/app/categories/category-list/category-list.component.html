@@ -1,0 +1,35 @@
+<main class="main">
+  <div class="content">
+    <h2>Lista de Categorias</h2>
+    <button class="btn" routerLink="/categories/add">Adicionar
+      Categoria</button>
+
+    <input [formControl]="searchControl" placeholder="Buscar por nome" />
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Data de Cadastro</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let category of categories">
+          <td>{{ category.id }}</td>
+          <td>{{ category.name }}</td>
+          <td>{{ category.createdAt | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+          <td>
+            <button class="btn edit"
+              [routerLink]="['/categories/edit', category.id]">Editar</button>
+            <button class="btn delete"
+              (click)="deleteCategory(category.id!)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="actions">
+      <button [routerLink]="['/']" class="btn btn-default">Voltar inicio</button>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,98 @@
+/* Estilo principal da página */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo da área de conteúdo */
+.content {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Estilo dos botões */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #4CAF50;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.edit {
+  background-color: #2196F3;
+}
+
+.delete {
+  background-color: #f44336;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+input[placeholder="Buscar por nome"] {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-default {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  width: 25%;
+  border-radius: 4px;
+}

@@ -1,0 +1,42 @@
+<main class="main">
+  <div class="content">
+    <div class="product-form-container">
+      <h2>{{ product.id ? 'Editar Produto' : 'Criar Novo Produto' }}</h2>
+      <form (ngSubmit)="onSubmit()" class="form">
+
+        <label for="name">Nome:</label>
+        <input type="text" [(ngModel)]="product.name" name="name" required
+          class="input" />
+
+        <label for="description">Descrição:</label>
+        <input type="text" [(ngModel)]="product.description" name="description"
+          class="input" />
+
+        <label for="category">Categoria:</label>
+        <select [(ngModel)]="product.category" name="category" required
+          class="select">
+          <option *ngFor="let category of categories" [value]="category">{{
+            category.name }}</option>
+        </select>
+
+        <label for="price">Preço:</label>
+        <input type="number" [(ngModel)]="product.price" name="price" required
+          class="input" />
+
+        <label for="quantity">Quantidade:</label>
+        <input type="number" [(ngModel)]="product.quantity" name="quantity"
+          required class="input" />
+
+        <div class="form-actions">
+          <button type="submit" class="btn submit">{{ product.id ? 'Atualizar'
+            : 'Adicionar' }} Produto</button>
+          <button [routerLink]="['/products']" class="btn btn-default">Voltar
+            para
+            todos os produtos</button>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+</main>

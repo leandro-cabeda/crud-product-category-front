@@ -1,0 +1,43 @@
+<main class="main">
+  <div class="content">
+    <h2>Lista de Produtos</h2>
+    <button class="btn" routerLink="/products/add">Adicionar Produto</button>
+
+    <input [formControl]="searchControl" placeholder="Buscar por nome" />
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Data de Cadastro</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.category.name }}</td>
+          <td>{{ product.price | currency: 'BRL' }}</td>
+          <td>{{ product.quantity }}</td>
+          <td>{{ product.createdAt | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+          <td>
+            <button class="btn edit"
+            [routerLink]="['/products/edit', product.id]">Editar</button>
+            <button class="btn delete"
+              (click)="deleteProduct(product.id!)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="actions">
+      <button [routerLink]="['/']" class="btn btn-default">Voltar
+        inicio</button>
+    </div>
+  </div>
+</main>
