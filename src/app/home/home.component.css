@@ -1,0 +1,56 @@
+/* Estilo principal da página */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo da área de conteúdo */
+.content {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo dos botões */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+.btn-secondary {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #1e88e5;
+}
